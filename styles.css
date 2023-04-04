@@ -9,7 +9,7 @@
     padding: 1rem;
     width: 90%;
     height: fit-content;
-    background-color: red;
+    background-color: #E7B10A;
     overflow: hidden;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem; 
@@ -45,8 +45,8 @@
     height: fit-content;
     padding: 0.5rem 0;
     overflow: hidden;
-    background-color: whitesmoke;
-    border-top: 0.1rem solid white;
+    background-color: #898121;
+    border-top: 0.1rem solid #F7F1E5;
     -webkit-border-radius: 0 0 2rem 2rem;
     -moz-border-radius: 0 0 2rem 2rem;
     border-radius: 0 0 2rem 2rem;
@@ -57,18 +57,18 @@
 }
 button{
     height: 5rem;
-    background-color: burlywood;
+    background-color: #E7B10A;
     border: none;
     font-size: 32px;
-    color: #fff;
+    color: #252525;
     width: 25%;
     margin: 0.5rem 0.2rem;
     -webkit-border-radius: 2rem;
     -moz-border-radius: 2rem;
     border-radius: 2rem;
-    -webkit-box-shadow: 0 5px 0 #888;
-    -moz-box-shadow: 0 5px 0 #888;
-    box-shadow: 0 5px 0 #888;
+    -webkit-box-shadow: 0 5px 0 #4C4B16;
+    -moz-box-shadow: 0 5px 0 #4C4B16;
+    box-shadow: 0 5px 0 #4C4B16;
     cursor: pointer;
 }
 .all-clear, .zero-btn{
@@ -78,16 +78,19 @@ button{
     width: 50%;
 }
 .operator, .equal-sign{
-    background-color: orange;
+    background-color: #F7F1E5;
 }
 button:hover{
-    background-color: darkgray;
+    background-color: #F7F1E5;
 }
 .operator:hover, .equal-sign:hover{
-    background-color: darkorange;
+    background-color: #E7B10A;
 }
 button:active {
     position: relative;
     top: 5px;
     box-shadow: none;
+}
+footer{
+    text-align: center;
 }
