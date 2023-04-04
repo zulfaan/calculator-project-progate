@@ -1,7 +1,12 @@
+const calculatorScreenHistory = document.querySelector('.calculator-screen-history');
 const calculatorScreen = document.querySelector('.calculator-screen');
 
-const updateScreen = (number)=>{
-    calculatorScreen.value = number;
+const updateScreen = ()=>{
+    calculatorScreen.value = currentNumber;
+}
+
+const updateScreenHistory = ()=>{
+    calculatorScreenHistory.value = `${prevNumber} ${calculationOperator} ${currentNumber}`;    
 }
 
 const numbers = document.querySelectorAll(".number");
@@ -9,7 +14,8 @@ const numbers = document.querySelectorAll(".number");
 numbers.forEach((number)=>{
     number.addEventListener("click", (event)=>{
         inputNumber(event.target.value);
-        updateScreen(currentNumber);
+        updateScreen();
+        updateScreenHistory();
     })
 })
 
@@ -36,6 +42,8 @@ operators.forEach((operator)=>{
 const inputOperator = (operator)=>{
     if (calculationOperator === '') {
         prevNumber = currentNumber;
+    } else{
+        calculate();
     }
     calculationOperator = operator;
     currentNumber = '0';
@@ -62,21 +70,23 @@ const calculate = () => {
         default:
             break;
     }
-    currentNumber = result;
+    currentNumber = result.toString();
+    prevNumber = currentNumber;
     calculationOperator = '';
 }
 const equalSign = document.querySelector('.equal-sign');
 
 equalSign.addEventListener('click', ()=>{
     calculate();
-    updateScreen(currentNumber);
+    updateScreen();
 });
 
 const clearBtn = document.querySelector('.all-clear');
 
 clearBtn.addEventListener('click', () => {
     clearAll();
-    updateScreen(currentNumber);
+    updateScreen();
+    updateScreenHistory();
 });
 const clearAll = () => {
     prevNumber = '';
@@ -94,5 +104,6 @@ const decimal = document.querySelector('.decimal');
 
 decimal.addEventListener('click', (event) => {
     inputDecimal(event.target.value);
-    updateScreen(currentNumber);
+    updateScreen();
+    updateScreenHistory();
 });

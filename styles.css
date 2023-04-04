@@ -1,36 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .calculator{
+    position: relative;
     text-align: center;
-    margin: 0 auto;
-    padding-top: 200px;
-    width: 400px;
+    margin: 1rem auto;
+    padding: 1rem;
+    width: 90%;
+    height: fit-content;
+    background-color: red;
+    overflow: hidden;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem; 
+    border-radius: 2rem;
 }
 .calculator-screen{
     width: 100%;
-    height: 100px;
+    height: 20%;
     background-color: #252525;
     color: #fff;
     text-align: right;
-    font-size: 36px;
+    font-size: 54px;
     border: none;
     padding: 0 20px;
     box-sizing: border-box;
 }
+.calculator-screen-history{
+    width: 100%;
+    height: 10%;
+    background-color: #252525;
+    color: grey;
+    text-align: right;
+    font-size: 24px;
+    border: none;
+    padding: 2px 20px 0 20px;
+    box-sizing: border-box;
+    -webkit-border-radius: 2rem 2rem 0 0;
+    -moz-border-radius: 2rem 2rem 0 0;
+    border-radius: 2rem 2rem 0 0;
+}
 .calculator-keys{
     width: 100%;
+    height: fit-content;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-top: 0.1rem solid white;
+    -webkit-border-radius: 0 0 2rem 2rem;
+    -moz-border-radius: 0 0 2rem 2rem;
+    border-radius: 0 0 2rem 2rem;
 }
 .row{
     display: flex;
+    padding: 0 0.2rem;
 }
 button{
-    height: 80px;
-    background-color: gray;
-    border: 1px solid black;
+    height: 5rem;
+    background-color: burlywood;
+    border: none;
     font-size: 32px;
     color: #fff;
     width: 25%;
-    outline: none;
+    margin: 0.5rem 0.2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
+    -webkit-box-shadow: 0 5px 0 #888;
+    -moz-box-shadow: 0 5px 0 #888;
+    box-shadow: 0 5px 0 #888;
+    cursor: pointer;
 }
 .all-clear, .zero-btn{
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    border-radius: 2rem;
     width: 50%;
 }
 .operator, .equal-sign{
@@ -41,4 +85,9 @@ button:hover{
 }
 .operator:hover, .equal-sign:hover{
     background-color: darkorange;
+}
+button:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
 }
